@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact Us | Horizon Tech & Business Hub</title>
@@ -258,5 +259,80 @@ window.addEventListener("scroll",()=>{
 });
 </script>
 
+=======
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Horizon Tech & Business Hub</title>
+<style>
+:root{--primary:#2563eb;--accent:#f59e0b;--ink:#0f172a;--line:#e5e7eb;--muted:#6b7280}
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#111827}
+a{color:var(--primary);text-decoration:none}.container{width:92%;max-width:1140px;margin:0 auto}
+.nav{border-bottom:1px solid var(--line);background:#fff}.nav__wrap{display:flex;justify-content:space-between;align-items:center;padding:14px 0}
+.logo{font-weight:800}.logo span{color:var(--accent)}
+.nav__menu{list-style:none;display:flex;gap:20px;margin:0;padding:0;align-items:center}
+.hero{background:linear-gradient(180deg,#f6f8ff,#fff);border-bottom:1px solid var(--line);padding:40px 0}
+.grid-2{display:grid;gap:22px;grid-template-columns:1fr 1fr}
+.card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}
+label{font-weight:600;margin:10px 0 6px;display:block}
+input,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+button{margin-top:10px;background:var(--primary);color:#fff;border:0;padding:10px 16px;border-radius:10px;font-weight:700}
+.muted{color:var(--muted)} .map{height:260px;border:1px dashed var(--line);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+@media (max-width:900px){.grid-2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="container nav__wrap">
+  <a class="logo" href="index.html">Horizon<span>Tech</span></a>
+  <ul class="nav__menu">
+    <li><a href="index.html">Home</a></li><li><a href="services.html">Services</a></li>
+    <li><a href="about.html">About</a></li><li><a href="get-started.html">Get Started</a></li>
+  </ul>
+</div></nav>
+
+<header class="hero"><div class="container"><h1>Contact Us</h1><p class="muted">We respond quickly on WhatsApp and email.</p></div></header>
+
+<section class="container" style="padding:44px 0">
+  <div class="grid-2">
+    <div class="card">
+      <h2>Reach Us</h2>
+      <p><strong>Address:</strong> Kayunga Town, Uganda</p>
+      <p><strong>Call/SMS:</strong> <a href="tel:+256779583968">0779 583 968</a></p>
+      <p><strong>WhatsApp:</strong> <a href="https://wa.me/256759206943" target="_blank">+256 759 206 943</a></p>
+      <p><strong>Email:</strong> <a href="mailto:horizontechhub@gmail.com">horizontechhub@gmail.com</a></p>
+      <p class="muted">Hours: Mon–Sat 8:00–18:00 (Sun closed)</p>
+      <div class="map">Add Google Map iframe here</div>
+    </div>
+
+    <form class="card" id="f" onsubmit="return sendWA(event)">
+      <h2>Send a Message</h2>
+      <label>Full Name</label><input id="name" required placeholder="Your name">
+      <label>Email</label><input id="email" type="email" required placeholder="you@example.com">
+      <label>Phone</label><input id="phone" required placeholder="+256 …">
+      <label>Message</label><textarea id="msg" rows="5" required placeholder="How can we help?"></textarea>
+      <button type="submit">Send via WhatsApp</button>
+      <p id="status" class="muted"></p>
+    </form>
+  </div>
+</section>
+
+<footer style="border-top:1px solid var(--line);padding:28px 0;background:#fafafa">
+  <div class="container"><small>© 2025 Horizon Tech & Business Hub</small></div>
+</footer>
+
+<script>
+function sendWA(e){
+  e.preventDefault();
+  const n=document.getElementById('name').value.trim();
+  const em=document.getElementById('email').value.trim();
+  const ph=document.getElementById('phone').value.trim();
+  const m=document.getElementById('msg').value.trim();
+  const s=document.getElementById('status');
+  if(!n||!em||!ph||!m){s.textContent="Please fill in all fields.";return false;}
+  const text=encodeURIComponent(`Hello Horizon Tech,%0AName: ${n}%0AEmail: ${em}%0APhone: ${ph}%0AMessage: ${m}`);
+  window.open(`https://wa.me/256759206943?text=${text}`,'_blank');
+  s.textContent="Opening WhatsApp…";
+  return false;
+}
+</script>
+>>>>>>> 2185c8802c5f08435c7896b365e181571370b576
 </body>
 </html>

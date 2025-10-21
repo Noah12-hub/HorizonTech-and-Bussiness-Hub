@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Login | Horizon Tech & Business Hub</title>
@@ -175,10 +176,79 @@ footer{
       <div class="alt-login">
         <a href="#" class="google" onclick="handleGoogleLogin(event)">Continue with Google</a>
       </div>
+=======
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Client Portal — Horizon Tech & Business Hub</title>
+<style>
+/* Same design language (trimmed for brevity) */
+:root{--primary:#2563eb;--accent:#f59e0b;--ink:#0f172a;--muted:#6b7280;--soft:#f8fafc;--line:#e5e7eb}
+*{box-sizing:border-box}html,body{margin:0;background:#fff;color:var(--ink);font:16px/1.6 system-ui,Segoe UI,Roboto,Ubuntu,Arial,sans-serif}
+a{text-decoration:none;color:inherit}.container{width:92%;max-width:1150px;margin-inline:auto}
+.nav{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line)}.nav__wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:800}.logo span{color:var(--accent)}.nav__menu{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+.nav__menu a{padding:8px 10px;border-radius:10px}.nav__menu a:hover,.nav__menu a.active{background:#eff6ff;color:var(--primary)}
+.pagehead{padding:64px 0;background:linear-gradient(180deg,#f8fafc,#fff);border-bottom:1px solid var(--line)}
+.pagehead h1{margin:0 0 6px}
+.auth{padding:40px 0}.grid{display:grid;gap:24px;grid-template-columns:1.1fr .9fr}
+.card{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff;box-shadow:0 10px 20px rgba(2,6,23,.04)}
+label{display:block;font-weight:700;margin:10px 0 6px}
+input{width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;outline:none}
+input:focus{box-shadow:0 0 0 3px rgba(37,99,235,.25);border-color:#c7d2fe}
+.btn{display:inline-block;padding:12px 16px;border-radius:10px;background:var(--primary);color:#fff;border:0;font-weight:700;margin-top:12px}
+.help{color:var(--muted);font-size:.95rem}
+.footer{border-top:1px solid var(--line);padding:24px 0;margin-top:40px;color:#1f2937;text-align:center}
+@media (max-width:900px){.grid{grid-template-columns:1fr}}
+</style>
+<script>function toggleMenu(){document.getElementById('menu').classList.toggle('show');}</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav__wrap">
+    <a class="logo" href="index.html">Horizon<span>Tech</span></a>
+    <ul id="menu" class="nav__menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="login.html">Login</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a style="border:1px solid #2563eb;color:#2563eb;border-radius:10px;padding:8px 10px" href="get-started.html">Get Started</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="pagehead">
+  <div class="container">
+    <h1>Client Portal Login</h1>
+    <p class="help">Access your orders, invoices, and project updates.</p>
+  </div>
+</header>
+
+<section class="auth">
+  <div class="container grid">
+    <form class="card" onsubmit="event.preventDefault(); alert('Demo only: connect backend later.');">
+      <label>Email</label>
+      <input type="email" placeholder="you@example.com" required />
+      <label>Password</label>
+      <input type="password" placeholder="••••••••" required />
+      <button class="btn" type="submit">Log In</button>
+      <p class="help">No account? <a href="get-started.html" style="color:#2563eb">Request access</a>.</p>
+    </form>
+
+    <div class="card">
+      <h2>What you can do</h2>
+      <ul>
+        <li>Track printing/web orders</li>
+        <li>View & download invoices</li>
+        <li>Message support directly</li>
+      </ul>
+      <p class="help">Need help? WhatsApp us on <a href="https://wa.me/256759206943" target="_blank" style="color:#2563eb">+256 759 206 943</a>.</p>
+>>>>>>> 2185c8802c5f08435c7896b365e181571370b576
     </div>
   </div>
 </section>
 
+<<<<<<< HEAD
 <!-- === FOOTER === -->
 <footer>
   <p>📍 Kayunga, Uganda | 📞 0779 583 968 | 💬 WhatsApp: 0759 206 943</p>
@@ -280,3 +350,10 @@ window.addEventListener("scroll",()=>{
 
 </body>
 </html>
+=======
+<footer class="footer">
+  © 2025 Horizon Tech & Business Hub — Kayunga, Uganda
+</footer>
+</body>
+</html>
+>>>>>>> 2185c8802c5f08435c7896b365e181571370b576
