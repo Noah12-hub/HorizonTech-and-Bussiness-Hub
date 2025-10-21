@@ -6,7 +6,7 @@
   <title>Horizon Tech & Business Hub | Empowering Uganda Through Technology</title>
 
   <meta name="description" content="Horizon Tech & Business Hub offers URA & Tax Filing, Printing, Branding, and Web Development services in Kayunga, Uganda.">
-  <meta name="keywords" content="Horizon Tech, Business Hub, URA, Tax Filing, Printing, Branding, Web Development, Uganda">
+  <meta name="keywords" content="Horizon Tech, Business Hub, URA, Tax Filing, Printing, Branding, Web Development, Uganda, Nazigo SACCO, Koman Finance, Kayunga">
   <meta property="og:title" content="Horizon Tech & Business Hub">
   <meta property="og:description" content="Empowering Uganda through business and technology solutions.">
   <meta property="og:image" content="assets/img/horizon-logo.png">
@@ -15,11 +15,9 @@
   <style>
     :root{
       --primary:#2563eb;
-      --primaryDark:#1e40af;
       --accent:#f59e0b;
       --accentDark:#d97706;
       --ink:#0b1221;
-      --muted:#94a3b8;
       --line:#233044;
       --white:#ffffff;
     }
@@ -27,105 +25,117 @@
     body{
       font-family:'Segoe UI',system-ui,Arial,sans-serif;
       color:#e8edf6;
-      background:linear-gradient(to bottom right, rgba(2,10,25,.65), rgba(2,10,25,.9)), url("assets/img/background.jpg") center/cover no-repeat fixed;
-      min-height:100vh;overflow-x:hidden;
+      background:linear-gradient(to bottom right, rgba(2,10,25,.65), rgba(2,10,25,.9)),
+                 url("assets/img/horizon.jpg") center/cover no-repeat fixed;
+      overflow-x:hidden;
+      min-height:100vh;
+      animation:fadeIn 1s ease both;
     }
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
     img{max-width:100%;display:block}
-
     .container{width:90%;max-width:1200px;margin:0 auto}
 
-    /* NAVIGATION */
+    /* NAV */
     nav{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:saturate(120%) blur(10px);
-      background:rgba(9,15,28,.75);
-      border-bottom:1px solid var(--line);
+      position:sticky;top:0;z-index:100;
+      background:rgba(10,15,28,0.85);
+      border-bottom:1px solid rgba(255,255,255,0.1);
+      backdrop-filter:blur(10px);
     }
-    .nav-wrap{
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 0;
-    }
-    .logo{font-weight:900;font-size:1.6rem;color:#fff}
-    .logo span{color:var(--accent)}
-    nav ul{list-style:none;display:flex;gap:22px;align-items:center}
-    nav a{
-      color:#cfd7e6;text-decoration:none;font-weight:600;
-      padding:8px 12px;border-radius:10px;
-      transition:transform .15s, background .2s, color .2s;
-    }
-    nav a:hover{color:#fff;background:rgba(255,255,255,.06);transform:translateY(-1px)}
-    nav a.active{background:rgba(245,158,11,.12);color:var(--accent);border:1px solid rgba(245,158,11,.35)}
-    .btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:800;text-decoration:none;transition:transform .15s, box-shadow .2s, background .2s, color .2s}
-    .btn--accent{background:var(--accent);color:#0b1221;box-shadow:0 6px 18px rgba(245,158,11,.35)}
-    .btn--accent:hover{background:var(--accentDark);transform:translateY(-2px)}
-    .btn--outline{border:2px solid var(--accent);color:var(--accent);background:transparent}
-    .btn--outline:hover{background:var(--accent);color:#0b1221}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0;}
+    .logo{font-weight:900;font-size:1.7rem;color:#fff;}
+    .logo span{color:var(--accent);}
+    nav ul{list-style:none;display:flex;gap:22px;align-items:center;}
+    nav a{color:#e4e8f2;text-decoration:none;font-weight:600;padding:8px 12px;border-radius:8px;transition:all .25s ease;}
+    nav a:hover{background:rgba(255,255,255,0.08);color:var(--white);}
+    nav a.active{color:var(--accent);border:1px solid rgba(245,158,11,.4);background:rgba(245,158,11,.1);}
+    .btn{padding:10px 18px;border-radius:10px;font-weight:700;cursor:pointer;}
+    .btn--accent{background:var(--accent);color:#0b1221;}
+    .btn--accent:hover{background:var(--accentDark);}
+    .btn--outline{border:2px solid var(--accent);color:var(--accent);background:transparent;}
+    .btn--outline:hover{background:var(--accent);color:#000;}
 
     /* HERO */
-    .hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;position:relative}
-    .hero-content{max-width:860px;animation:fadeInUp 900ms ease both}
-    .hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:900;line-height:1.1;margin-bottom:.5em;
-      background:linear-gradient(90deg,#ffffff,#ffd79a,#ffffff);
-      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-    .hero p{font-size:1.12rem;color:#e7ecf9;opacity:.95;margin-bottom:1.6em}
-    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+    .hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:0 20px;}
+    .hero-content{max-width:860px;animation:floatHero 6s ease-in-out infinite;}
+    @keyframes floatHero{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
+    .hero h1{font-size:clamp(2.5rem,5vw,4rem);font-weight:900;color:#fff;text-shadow:0 4px 18px rgba(0,0,0,0.7);}
+    .hero p{font-size:1.15rem;margin-top:15px;color:#e6edf9;opacity:0.95;text-shadow:0 2px 10px rgba(0,0,0,0.5);}
+    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:28px;}
+
+    /* SECTIONS */
+    section{padding:80px 0;}
+    .section-head{text-align:center;margin-bottom:40px;}
+    .section-head h2{font-size:2.2rem;color:var(--accent);}
+    .section-head p{color:#d1d5db;}
 
     /* SERVICES */
-    section{padding:72px 0}
-    .section-head{text-align:center;margin-bottom:40px}
-    .section-head h2{font-size:2rem;color:#fff;margin-bottom:.25em}
-    .section-head p{color:#c9d5ea}
-    .services{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .services{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
     .service-card{
-      background:linear-gradient(180deg,#0e1730,#0b1428);
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:16px;overflow:hidden;
-      box-shadow:0 18px 38px rgba(2,10,25,.45);
-      transition:transform .25s, box-shadow .25s, border-color .25s;
+      background:rgba(15,20,35,0.9);
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.1);
+      box-shadow:0 10px 25px rgba(0,0,0,0.4);
+      text-align:center;
+      transition:all 0.4s ease;
+      animation:floatCard 7s ease-in-out infinite;
     }
-    .service-card:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(37,99,235,.35);border-color:rgba(245,158,11,.45)}
-    .card-media{height:170px;overflow:hidden}
-    .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
-    .service-card:hover .card-media img{transform:scale(1.05)}
-    .card-body{padding:18px 18px 22px;text-align:center}
-    .service-card h3{color:#cfe0ff;margin:.45em 0 .25em;font-size:1.1rem}
-    .service-card p{color:#9fb1ce}
+    @keyframes floatCard{0%{transform:translateY(0);}50%{transform:translateY(-8px);}100%{transform:translateY(0);}}
+    .card-media{height:200px;overflow:hidden;}
+    .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s;}
+    .service-card:hover .card-media img{transform:scale(1.08);}
+    .card-body{padding:18px;}
+    .card-body h3{color:var(--accent);margin-bottom:8px;}
+    .card-body p{color:#cbd5e1;}
+
+    /* WHY CHOOSE US */
+    .why{background:rgba(10,12,25,0.85);}
+    .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:25px;margin-top:35px;text-align:center;}
+    .why-grid div{background:rgba(255,255,255,0.05);padding:25px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);}
+    .why-grid h3{color:var(--accent);}
+    .why-grid p{color:#cbd5e1;}
+
+    /* TESTIMONIALS */
+    .testimonials{background:linear-gradient(180deg, rgba(10,15,28,0.9), rgba(5,10,20,0.9));text-align:center;color:#f9fafb;}
+    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px;margin-top:50px;}
+    .testimonial-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.1);
+      border-radius:16px;
+      padding:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+      transition:all 0.4s ease;
+      animation:fadeUp 1.5s ease;
+    }
+    .testimonial-card:hover{transform:translateY(-8px);border-color:rgba(245,158,11,0.6);box-shadow:0 15px 30px rgba(245,158,11,0.3);}
+    .quote{font-style:italic;font-size:1.05rem;color:#e2e8f0;margin-bottom:20px;}
+    .client-info{display:flex;align-items:center;gap:12px;justify-content:center;}
+    .client-photo{width:55px;height:55px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);}
+    .client-info h4{font-size:1rem;color:#fff;margin-bottom:2px;}
+    .client-info small{color:#cbd5e1;font-size:0.85rem;}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 
     /* MAP */
-    .map-wrap{margin-top:58px}
-    .map-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff}
-    .map-container{border-radius:14px;overflow:hidden;box-shadow:0 18px 38px rgba(2,10,25,.5)}
-    iframe{width:100%;height:420px;border:0;display:block}
+    .map-head{text-align:center;color:#fff;margin-bottom:14px;}
+    .map-container{border-radius:18px;overflow:hidden;box-shadow:0 18px 38px rgba(2,10,25,.5);border:1px solid rgba(255,255,255,0.1);}
+    iframe{width:100%;height:420px;border:0;display:block;}
 
     /* FOOTER */
-    footer{background:linear-gradient(180deg,#0b1221,#070c16);color:#e9eef9;text-align:center;
-      padding:34px 10px;border-top:2px solid rgba(245,158,11,.45);margin-top:8px}
-    footer p+p{margin-top:6px}small{opacity:.85}
+    footer{background:linear-gradient(180deg,#0b1221,#070c16);color:#e9eef9;text-align:center;padding:34px 10px;border-top:2px solid rgba(245,158,11,.45);margin-top:8px;}
+    footer p+p{margin-top:6px;} small{opacity:.85;}
 
-    /* WHATSAPP FLOAT BUTTON */
-    #connectBtn{
-      position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;
-      border:none;border-radius:50px;padding:14px 28px;font-weight:700;cursor:pointer;
-      box-shadow:0 4px 8px rgba(0,0,0,.3);z-index:1000;
-      font-size:15px;display:flex;align-items:center;gap:10px;
-    }
-    #connectBtn:hover{background:#20b857}
-
-    .modal{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;
-      background:rgba(0,0,0,0.6);justify-content:center;align-items:center}
-    .modal-content{
-      background:#fff;border-radius:12px;max-width:400px;width:90%;padding:25px;text-align:center;
-      color:#0f172a;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.3)
-    }
-    .modal-content h2{color:var(--primary);margin-top:0}
-    .modal-content a{
-      display:block;margin:8px 0;padding:10px;border-radius:8px;font-weight:600;color:#fff;text-decoration:none;
-    }
-    .modal-content a.email{background:#2563eb}
-    .modal-content a.call{background:#16a34a}
-    .modal-content a.whatsapp{background:#25D366}
-    .close-btn{position:absolute;top:10px;right:15px;font-size:20px;color:#666;cursor:pointer}
+    /* WHATSAPP */
+    #connectBtn{position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;border:none;border-radius:50px;padding:14px 28px;font-weight:700;cursor:pointer;box-shadow:0 4px 8px rgba(0,0,0,.3);z-index:1000;font-size:15px;display:flex;align-items:center;gap:10px;}
+    #connectBtn:hover{background:#20b857;}
+    .modal{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;}
+    .modal-content{background:#fff;border-radius:12px;max-width:400px;width:90%;padding:25px;text-align:center;color:#0f172a;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.3);}
+    .modal-content h2{color:var(--primary);margin-top:0;}
+    .modal-content a{display:block;margin:8px 0;padding:10px;border-radius:8px;font-weight:600;color:#fff;text-decoration:none;}
+    .modal-content a.email{background:#2563eb;}
+    .modal-content a.call{background:#16a34a;}
+    .modal-content a.whatsapp{background:#25D366;}
+    .close-btn{position:absolute;top:10px;right:15px;font-size:20px;color:#666;cursor:pointer;}
   </style>
 </head>
 
@@ -157,11 +167,27 @@
     </div>
   </section>
 
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+    <div class="container">
+      <div class="section-head">
+        <h2>Why Choose Horizon Tech?</h2>
+        <p>We combine professionalism, integrity, and technology to power Uganda’s digital growth.</p>
+      </div>
+      <div class="why-grid">
+        <div><h3>💡 Reliable</h3><p>Timely services and guaranteed compliance.</p></div>
+        <div><h3>🔒 Secure</h3><p>Your business data and finances are always protected.</p></div>
+        <div><h3>📊 Professional</h3><p>Certified experts in URA, branding, and tech.</p></div>
+        <div><h3>🌍 Local Impact</h3><p>Empowering SACCOs and enterprises in Kayunga.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- SERVICES -->
   <section>
     <div class="container">
       <div class="section-head">
-        <h2>What We Do Best</h2>
+        <h2>Our Core Services</h2>
         <p>One hub for compliance, professional image, and digital presence.</p>
       </div>
       <div class="services">
@@ -169,25 +195,57 @@
           <div class="card-media"><img src="assets/img/tax.jpg" alt="URA & Tax Filing"></div>
           <div class="card-body"><h3>URA & Tax Filing</h3><p>TIN registration, PRN generation, PAYE & NSSF, and returns — fast and correct.</p></div>
         </article>
-
         <article class="service-card">
           <div class="card-media"><img src="assets/img/print.jpg" alt="Printing & Stationery"></div>
-          <div class="card-body"><h3>Printing & Stationery</h3><p>Business cards, receipts, banners, certificates, letterheads — crisp and consistent.</p></div>
+          <div class="card-body"><h3>Printing & Stationery</h3><p>Business cards, receipts, banners, certificates, and letterheads — crisp and consistent.</p></div>
         </article>
-
         <article class="service-card">
           <div class="card-media"><img src="assets/img/website.jpg" alt="Web Development"></div>
-          <div class="card-body"><h3>Web Development</h3><p>Mobile-first sites with SEO and ongoing support for your team.</p></div>
+          <div class="card-body"><h3>Web Development</h3><p>Mobile-first websites with SEO and ongoing support for your team.</p></div>
         </article>
       </div>
+    </div>
+  </section>
 
-      <!-- MAP -->
-      <div class="map-wrap">
-        <div class="map-head"><h3>📍 Kayunga, Uganda</h3></div>
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.753369667598!2d32.8948!3d0.7045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177b4f3e8cc9a127%3A0x4a321b2aaf7b7982!2sKayunga%2C%20Uganda!5e0!3m2!1sen!2sug!4v1717845123000!5m2!1sen!2sug"
-            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <h2>What Our Clients Say</h2>
+        <p>We’re proud to serve entrepreneurs, SACCOs, and organizations across Uganda.</p>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p class="quote">“Horizon Tech made our URA returns completely stress-free. They guided us with professionalism and honesty.”</p>
+          <div class="client-info">
+            <img src="assets/img/client1.jpg" alt="Nazigo SACCO" class="client-photo">
+            <div><h4>Sarah Namatovu</h4><small>Manager, Nazigo SACCO – Kayunga</small></div>
+          </div>
         </div>
+        <div class="testimonial-card">
+          <p class="quote">“Our SACCO stationery and branding have never looked better. Their printing quality is top-notch.”</p>
+          <div class="client-info">
+            <img src="assets/img/client2.jpg" alt="Koman Finance" class="client-photo">
+            <div><h4>Peter Kizito</h4><small>Director, Koman Finance Ltd</small></div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="quote">“They built our website and trained our staff on how to use it. Horizon Tech truly empowers small businesses.”</p>
+          <div class="client-info">
+            <img src="assets/img/client3.jpg" alt="Baale Initiative" class="client-photo">
+            <div><h4>Grace Namusoke</h4><small>Project Lead, Baale Development Initiative</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section>
+    <div class="container">
+      <div class="map-head"><h3>📍 Nazigo SACCO – Baale Constituency, Kayunga District, Uganda</h3></div>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63615.71078875728!2d32.88052957883153!3d0.8752622740308126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177b31e8bde07ffb%3A0x77c42953b410d97c!2sNazigo%20SACCO%2C%20Kayunga%2C%20Uganda!5e0!3m2!1sen!2sug!4v1730111222000!5m2!1sen!2sug" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -199,7 +257,7 @@
     <small>© 2025 Horizon Tech & Business Hub. All Rights Reserved.</small>
   </footer>
 
-  <!-- QUICK CONNECT BUTTON + MODAL -->
+  <!-- QUICK CONNECT -->
   <button id="connectBtn">💬 Connect on WhatsApp</button>
   <div id="connectModal" class="modal">
     <div class="modal-content">
@@ -212,7 +270,6 @@
   </div>
 
   <script>
-    // WhatsApp modal toggle
     const modal=document.getElementById("connectModal");
     document.getElementById("connectBtn").onclick=()=>{modal.style.display="flex"};
     window.onclick=e=>{if(e.target===modal){modal.style.display="none"}};
