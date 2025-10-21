@@ -1,125 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Horizon Tech & Business Hub | Empowering Uganda Through Technology</title>
 
-  <!-- SEO & Meta -->
   <meta name="description" content="Horizon Tech & Business Hub offers URA & Tax Filing, Printing, Branding, and Web Development services in Kayunga, Uganda.">
   <meta name="keywords" content="Horizon Tech, Business Hub, URA, Tax Filing, Printing, Branding, Web Development, Uganda">
   <meta property="og:title" content="Horizon Tech & Business Hub">
   <meta property="og:description" content="Empowering Uganda through business and technology solutions.">
-  <meta property="og:image" content="assets/horizon-logo.png">
-  <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta property="og:image" content="assets/img/horizon-logo.png">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png"/>
 
   <style>
     :root{
-      --primary:#2563eb; --primaryDark:#1e40af;
-      --accent:#f59e0b; --accentDark:#e48b00;
-      --ink:#0f172a; --muted:#94a3b8; --line:#334155;
+      --primary:#2563eb;
+      --primaryDark:#1e40af;
+      --accent:#f59e0b;
+      --accentDark:#d97706;
+      --ink:#0b1221;
+      --muted:#94a3b8;
+      --line:#233044;
+      --white:#ffffff;
     }
-    * { box-sizing: border-box; margin:0; padding:0; }
+    *{box-sizing:border-box;margin:0;padding:0}
     body{
-      font-family:'Segoe UI',sans-serif;
-      color:#e2e8f0;
-      background:#0f172a url("assets/background.jpg") center/cover no-repeat;
-      position: relative;
-      overflow-x:hidden;
+      font-family:'Segoe UI',system-ui,Arial,sans-serif;
+      color:#e8edf6;
+      background:linear-gradient(to bottom right, rgba(2,10,25,.65), rgba(2,10,25,.9)), url("assets/img/background.jpg") center/cover no-repeat fixed;
+      min-height:100vh;overflow-x:hidden;
     }
-    body::before {
-      content: "";
-      position: absolute; top:0; left:0; right:0; bottom:0;
-      background: rgba(0,0,0,0.55);
-      z-index: 0;
-    }
-    .container { width:90%; max-width:1200px; margin:0 auto; position: relative; z-index:1; }
+    img{max-width:100%;display:block}
 
-    /* Navigation */
-    nav {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:16px 5%; position:sticky; top:0; z-index:100;
-      background:rgba(15,23,42,0.9); backdrop-filter:blur(10px);
+    .container{width:90%;max-width:1200px;margin:0 auto}
+
+    /* NAVIGATION */
+    nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(120%) blur(10px);
+      background:rgba(9,15,28,.75);
       border-bottom:1px solid var(--line);
     }
-    .logo { font-weight:900; font-size:1.6rem; color:#fff; }
-    .logo span { color: var(--accent); }
-    nav ul { list-style:none; display:flex; gap:24px; }
-    nav li a {
-      color:#e2e8f0; font-weight:600; text-decoration:none;
-      transition: color .3s, transform .2s;
+    .nav-wrap{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
     }
-    nav li a:hover { color:var(--accent); transform:translateY(-2px); }
-
-    .btn {
-      padding:10px 16px; border-radius:10px; font-weight:700; text-decoration:none;
-      transition: all .3s ease;
+    .logo{font-weight:900;font-size:1.6rem;color:#fff}
+    .logo span{color:var(--accent)}
+    nav ul{list-style:none;display:flex;gap:22px;align-items:center}
+    nav a{
+      color:#cfd7e6;text-decoration:none;font-weight:600;
+      padding:8px 12px;border-radius:10px;
+      transition:transform .15s, background .2s, color .2s;
     }
-    .btn--accent { background: var(--accent); color:#fff; }
-    .btn--accent:hover { background: var(--accentDark); }
-    .btn--outline { border:2px solid var(--accent); color:var(--accent); background:#fff; }
-    .btn--outline:hover { background:var(--accent); color:#fff; }
+    nav a:hover{color:#fff;background:rgba(255,255,255,.06);transform:translateY(-1px)}
+    nav a.active{background:rgba(245,158,11,.12);color:var(--accent);border:1px solid rgba(245,158,11,.35)}
+    .btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:800;text-decoration:none;transition:transform .15s, box-shadow .2s, background .2s, color .2s}
+    .btn--accent{background:var(--accent);color:#0b1221;box-shadow:0 6px 18px rgba(245,158,11,.35)}
+    .btn--accent:hover{background:var(--accentDark);transform:translateY(-2px)}
+    .btn--outline{border:2px solid var(--accent);color:var(--accent);background:transparent}
+    .btn--outline:hover{background:var(--accent);color:#0b1221}
 
-    /* Hero */
-    .hero { position: relative; height:85vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 20px; }
-    .hero-content { max-width:800px; z-index:1; animation: fadeInUp 1.2s ease; }
-    .hero-content h1 { font-size:clamp(2.2rem,5vw,3.6rem); margin-bottom:.5em; color:#fff; }
-    .hero-content p { font-size:1.2rem; margin-bottom:1.5em; color:#e5e7eb; }
+    /* HERO */
+    .hero{min-height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20px;position:relative}
+    .hero-content{max-width:860px;animation:fadeInUp 900ms ease both}
+    .hero h1{font-size:clamp(2.4rem,5.2vw,4rem);font-weight:900;line-height:1.1;margin-bottom:.5em;
+      background:linear-gradient(90deg,#ffffff,#ffd79a,#ffffff);
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+    .hero p{font-size:1.12rem;color:#e7ecf9;opacity:.95;margin-bottom:1.6em}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
 
-    @keyframes fadeInUp {
-      from { opacity:0; transform:translateY(40px); }
-      to { opacity:1; transform:none; }
+    /* SERVICES */
+    section{padding:72px 0}
+    .section-head{text-align:center;margin-bottom:40px}
+    .section-head h2{font-size:2rem;color:#fff;margin-bottom:.25em}
+    .section-head p{color:#c9d5ea}
+    .services{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .service-card{
+      background:linear-gradient(180deg,#0e1730,#0b1428);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:16px;overflow:hidden;
+      box-shadow:0 18px 38px rgba(2,10,25,.45);
+      transition:transform .25s, box-shadow .25s, border-color .25s;
     }
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 26px 54px rgba(37,99,235,.35);border-color:rgba(245,158,11,.45)}
+    .card-media{height:170px;overflow:hidden}
+    .card-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+    .service-card:hover .card-media img{transform:scale(1.05)}
+    .card-body{padding:18px 18px 22px;text-align:center}
+    .service-card h3{color:#cfe0ff;margin:.45em 0 .25em;font-size:1.1rem}
+    .service-card p{color:#9fb1ce}
 
-    section { padding:70px 0; position: relative; z-index:1; }
-    .section-head { text-align:center; margin-bottom:40px; }
-    .section-head h2 { font-size:2rem; color:#fff; }
-    .section-head p { color:#cbd5e1; }
+    /* MAP */
+    .map-wrap{margin-top:58px}
+    .map-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;color:#fff}
+    .map-container{border-radius:14px;overflow:hidden;box-shadow:0 18px 38px rgba(2,10,25,.5)}
+    iframe{width:100%;height:420px;border:0;display:block}
 
-    /* Services */
-    .services {
-      display:grid; gap:30px;
-      grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    }
-    .service-card {
-      background:#fff; color:#0f172a; padding:25px; border-radius:14px; text-align:center;
-      box-shadow:0 6px 20px rgba(0,0,0,.2);
-      transition: transform .3s, box-shadow .3s;
-    }
-    .service-card:hover { transform:translateY(-6px); box-shadow: 0 0 25px rgba(37,99,235,.5); }
-    .service-card img { width:80px; height:80px; margin-bottom:10px; }
-    .service-card h3 { color:var(--primary); margin:.4em 0 .2em; }
-    .service-card p { color:#1e293b; }
+    /* FOOTER */
+    footer{background:linear-gradient(180deg,#0b1221,#070c16);color:#e9eef9;text-align:center;
+      padding:34px 10px;border-top:2px solid rgba(245,158,11,.45);margin-top:8px}
+    footer p+p{margin-top:6px}small{opacity:.85}
 
-    /* Map Section */
-    .map-container {
-      margin-top:60px;
-      border-radius:12px;
-      overflow:hidden;
-      box-shadow:0 6px 20px rgba(0,0,0,.2);
+    /* WHATSAPP FLOAT BUTTON */
+    #connectBtn{
+      position:fixed;bottom:25px;right:25px;background:#25D366;color:#fff;
+      border:none;border-radius:50px;padding:14px 28px;font-weight:700;cursor:pointer;
+      box-shadow:0 4px 8px rgba(0,0,0,.3);z-index:1000;
+      font-size:15px;display:flex;align-items:center;gap:10px;
     }
-    iframe { width:100%; height:400px; border:0; display:block; }
+    #connectBtn:hover{background:#20b857}
 
-    footer {
-      background:rgba(0,0,0,.85); color:#fff; text-align:center;
-      padding:30px 10px; border-top:3px solid var(--accent);
+    .modal{display:none;position:fixed;z-index:1001;left:0;top:0;width:100%;height:100%;
+      background:rgba(0,0,0,0.6);justify-content:center;align-items:center}
+    .modal-content{
+      background:#fff;border-radius:12px;max-width:400px;width:90%;padding:25px;text-align:center;
+      color:#0f172a;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.3)
     }
+    .modal-content h2{color:var(--primary);margin-top:0}
+    .modal-content a{
+      display:block;margin:8px 0;padding:10px;border-radius:8px;font-weight:600;color:#fff;text-decoration:none;
+    }
+    .modal-content a.email{background:#2563eb}
+    .modal-content a.call{background:#16a34a}
+    .modal-content a.whatsapp{background:#25D366}
+    .close-btn{position:absolute;top:10px;right:15px;font-size:20px;color:#666;cursor:pointer}
   </style>
 </head>
 
 <body>
-  <!-- NAVIGATION -->
+  <!-- NAV -->
   <nav>
-    <div class="logo">Horizon<span>Tech</span></div>
-    <ul>
-      <li><a href="index.html" style="color:var(--accent);">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="get-started.html">Get Started</a></li>
-      <li><a class="btn btn--outline" href="login.html">Login</a></li>
-    </ul>
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">Horizon<span>Tech</span></a>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="get-started.html">Get Started</a></li>
+        <li><a class="btn btn--outline" href="login.html">Login</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -127,8 +150,10 @@
     <div class="hero-content">
       <h1>Innovating Everyday Business in Uganda</h1>
       <p>We simplify URA & tax filing, printing & branding, and web development so you can focus on growth. Based in Kayunga, serving SMEs, schools, and organizations.</p>
-      <a href="get-started.html" class="btn btn--accent">Get Started</a>
-      <a href="services.html" class="btn btn--outline">Explore Services</a>
+      <div class="actions">
+        <a href="get-started.html" class="btn btn--accent">Get Started</a>
+        <a href="services.html" class="btn btn--outline">Explore Services</a>
+      </div>
     </div>
   </section>
 
@@ -140,26 +165,29 @@
         <p>One hub for compliance, professional image, and digital presence.</p>
       </div>
       <div class="services">
-        <div class="service-card">
-          <img src="assets/tax.jpg" alt="URA & Tax Filing Service" loading="lazy">
-          <h3>URA & Tax Filing</h3>
-          <p>TIN registration, PRN generation, PAYE & NSSF, and returns — fast and correct.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/print.jpg" alt="Printing & Stationery" loading="lazy">
-          <h3>Printing & Stationery</h3>
-          <p>Business cards, receipts, banners, certificates, letterheads — crisp and consistent.</p>
-        </div>
-        <div class="service-card">
-          <img src="assets/website.jpg" alt="Web Development" loading="lazy">
-          <h3>Web Development</h3>
-          <p>Mobile-first sites with SEO and support for your team.</p>
-        </div>
+        <article class="service-card">
+          <div class="card-media"><img src="assets/img/tax.jpg" alt="URA & Tax Filing"></div>
+          <div class="card-body"><h3>URA & Tax Filing</h3><p>TIN registration, PRN generation, PAYE & NSSF, and returns — fast and correct.</p></div>
+        </article>
+
+        <article class="service-card">
+          <div class="card-media"><img src="assets/img/print.jpg" alt="Printing & Stationery"></div>
+          <div class="card-body"><h3>Printing & Stationery</h3><p>Business cards, receipts, banners, certificates, letterheads — crisp and consistent.</p></div>
+        </article>
+
+        <article class="service-card">
+          <div class="card-media"><img src="assets/img/website.jpg" alt="Web Development"></div>
+          <div class="card-body"><h3>Web Development</h3><p>Mobile-first sites with SEO and ongoing support for your team.</p></div>
+        </article>
       </div>
 
-      <!-- Google Map Embed -->
-      <div class="map-container">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.753369667598!2d32.8948!3d0.7045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177b4f3e8cc9a127%3A0x4a321b2aaf7b7982!2sKayunga%2C%20Uganda!5e0!3m2!1sen!2sug!4v1717845123000!5m2!1sen!2sug" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- MAP -->
+      <div class="map-wrap">
+        <div class="map-head"><h3>📍 Kayunga, Uganda</h3></div>
+        <div class="map-container">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.753369667598!2d32.8948!3d0.7045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177b4f3e8cc9a127%3A0x4a321b2aaf7b7982!2sKayunga%2C%20Uganda!5e0!3m2!1sen!2sug!4v1717845123000!5m2!1sen!2sug"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -167,8 +195,27 @@
   <!-- FOOTER -->
   <footer>
     <p>Horizon Tech & Business Hub — Empowering Uganda through professional services and technology.</p>
-    <p>📍 Kayunga, Uganda | 📞 0779 583 968 | 💬 WhatsApp: 0759 206 943</p>
+    <p>📞 0779 583 968 | 💬 WhatsApp: 0759 206 943</p>
     <small>© 2025 Horizon Tech & Business Hub. All Rights Reserved.</small>
   </footer>
+
+  <!-- QUICK CONNECT BUTTON + MODAL -->
+  <button id="connectBtn">💬 Connect on WhatsApp</button>
+  <div id="connectModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="document.getElementById('connectModal').style.display='none'">✖</span>
+      <h2>Quick Connect</h2>
+      <a class="whatsapp" href="https://wa.me/256759206943" target="_blank">💚 WhatsApp Chat</a>
+      <a class="call" href="tel:+256779583968">📞 Call Now</a>
+      <a class="email" href="mailto:horizontechhub@gmail.com">📧 Email Us</a>
+    </div>
+  </div>
+
+  <script>
+    // WhatsApp modal toggle
+    const modal=document.getElementById("connectModal");
+    document.getElementById("connectBtn").onclick=()=>{modal.style.display="flex"};
+    window.onclick=e=>{if(e.target===modal){modal.style.display="none"}};
+  </script>
 </body>
 </html>
